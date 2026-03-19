@@ -34,11 +34,15 @@ export default function Layout({ children }: LayoutProps) {
       <header className="bg-card/90 backdrop-blur-sm border-b border-border sticky top-0 z-50">
         <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
           <Link to="/" className="flex items-center gap-2.5 shrink-0">
-            <div className="w-7 h-7 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-white text-xs font-display font-bold">A</span>
+            <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center" style={{ background: 'hsl(43 96% 48%)' }}>
+              <img
+                src="https://cdn.poehali.dev/projects/f193e065-8cb7-449d-926b-03cdca89cfef/bucket/967c9bec-8849-4be2-a4e0-cf23297e1ce2.png"
+                alt="Adept Online"
+                className="w-full h-full object-contain p-1"
+              />
             </div>
-            <span className="font-display font-semibold text-sm text-foreground hidden sm:block tracking-tight">
-              Adept Online
+            <span className="font-display font-bold text-sm text-foreground hidden sm:block tracking-widest uppercase">
+              ADEPT ONLINE
             </span>
           </Link>
 
