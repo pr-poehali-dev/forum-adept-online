@@ -135,35 +135,15 @@ export const threads = [
   },
 ];
 
-export const posts = [
-  {
-    id: 1,
-    threadId: 1,
-    author: { name: 'Михаил Волков', avatar: 'МВ', username: 'mvolkov', role: 'admin', reputation: 890, posts: 234 },
-    content: 'Рады объявить о выходе версии 2.4! В этом обновлении мы добавили поддержку тёмной темы, улучшили производительность на 30% и исправили ряд критических багов. Полный список изменений доступен в документации.',
-    createdAt: '2024-03-18 10:00',
-    likes: 18,
-    isLiked: false,
-  },
-  {
-    id: 2,
-    threadId: 1,
-    author: { name: 'Ольга Сидорова', avatar: 'ОС', username: 'osidorova', role: 'member', reputation: 340, posts: 67 },
-    content: 'Отличные новости! Тёмная тема — это то, чего давно ждали. Уже попробовала, выглядит очень аккуратно. Есть ли планы добавить автоматическое переключение по системным настройкам?',
-    createdAt: '2024-03-18 10:45',
-    likes: 5,
-    isLiked: true,
-  },
-  {
-    id: 3,
-    threadId: 1,
-    author: { name: 'Дмитрий Кузнецов', avatar: 'ДК', username: 'dkuznetsov', role: 'moderator', reputation: 720, posts: 189 },
-    content: 'Прирост производительности действительно ощущается. Страницы загружаются заметно быстрее. Хотел бы уточнить — планируется ли API для внешних интеграций в 2.5?',
-    createdAt: '2024-03-18 11:30',
-    likes: 9,
-    isLiked: false,
-  },
-];
+export const posts: {
+  id: number;
+  threadId: number;
+  author: { name: string; avatar: string; username: string; role: string; reputation: number; posts: number };
+  content: string;
+  createdAt: string;
+  likes: number;
+  isLiked: boolean;
+}[] = [];
 
 export const messages = [
   {
