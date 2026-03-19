@@ -72,68 +72,18 @@ export const categories = [
   },
 ];
 
-export const threads = [
-  {
-    id: 1,
-    categoryId: 1,
-    title: 'Обновление платформы до версии 2.4 — что нового?',
-    author: { name: 'Михаил Волков', avatar: 'МВ', username: 'mvolkov' },
-    createdAt: '2024-03-18',
-    lastReply: { author: 'Анна Л.', time: '5 минут назад' },
-    replies: 24,
-    views: 412,
-    isPinned: true,
-    tags: ['новости', 'обновление'],
-  },
-  {
-    id: 2,
-    categoryId: 1,
-    title: 'Как настроить уведомления по email — пошаговая инструкция',
-    author: { name: 'Ольга Сидорова', avatar: 'ОС', username: 'osidorova' },
-    createdAt: '2024-03-17',
-    lastReply: { author: 'Кирилл Н.', time: '2 часа назад' },
-    replies: 8,
-    views: 156,
-    isPinned: false,
-    tags: ['инструкция', 'настройка'],
-  },
-  {
-    id: 3,
-    categoryId: 2,
-    title: 'Ошибка 403 при попытке войти через мобильный браузер',
-    author: { name: 'Сергей Петров', avatar: 'СП', username: 'spetrov' },
-    createdAt: '2024-03-17',
-    lastReply: { author: 'Техподдержка', time: '20 минут назад' },
-    replies: 12,
-    views: 289,
-    isPinned: false,
-    tags: ['баг', 'авторизация'],
-  },
-  {
-    id: 4,
-    categoryId: 4,
-    title: 'Переход с Vue на React — обсуждаем плюсы и минусы',
-    author: { name: 'Дмитрий Кузнецов', avatar: 'ДК', username: 'dkuznetsov' },
-    createdAt: '2024-03-16',
-    lastReply: { author: 'Алексей К.', time: '1 час назад' },
-    replies: 47,
-    views: 1204,
-    isPinned: false,
-    tags: ['react', 'vue', 'frontend'],
-  },
-  {
-    id: 5,
-    categoryId: 1,
-    title: 'Предложения по улучшению интерфейса форума',
-    author: { name: 'Наташа Иванова', avatar: 'НИ', username: 'nivanova' },
-    createdAt: '2024-03-15',
-    lastReply: { author: 'Михаил В.', time: '3 часа назад' },
-    replies: 31,
-    views: 567,
-    isPinned: false,
-    tags: ['предложения', 'ui'],
-  },
-];
+export const threads: {
+  id: number;
+  categoryId: number;
+  title: string;
+  author: { name: string; avatar: string; username: string };
+  createdAt: string;
+  lastReply: { author: string; time: string };
+  replies: number;
+  views: number;
+  isPinned: boolean;
+  tags: string[];
+}[] = [];
 
 export const posts: {
   id: number;
