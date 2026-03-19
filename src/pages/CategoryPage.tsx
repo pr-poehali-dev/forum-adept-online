@@ -51,16 +51,15 @@ export default function CategoryPage() {
             <div key={sub.id} className={`flex items-center gap-2 px-3 py-2.5 bg-card border border-border rounded-lg text-sm ${sub.isPrivate ? 'opacity-70' : ''}`}>
               {sub.isPrivate && <Icon name="Lock" size={13} className="text-muted-foreground" />}
               <span className="font-medium">{sub.name}</span>
-              <span className="ml-auto text-xs text-muted-foreground">{sub.threads}</span>
+              
             </div>
           ))}
         </div>
       )}
 
       <div className="bg-card border border-border rounded-xl overflow-hidden">
-        <div className="px-5 py-3 border-b border-border bg-secondary/30 flex items-center justify-between">
+        <div className="px-5 py-3 border-b border-border bg-secondary/30">
           <span className="text-sm font-medium">Темы</span>
-          <span className="text-xs text-muted-foreground">{catThreads.length} из {category.threads}</span>
         </div>
         {catThreads.length === 0 ? (
           <div className="py-12 text-center text-muted-foreground text-sm">
