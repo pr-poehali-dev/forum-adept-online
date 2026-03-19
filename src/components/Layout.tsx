@@ -21,8 +21,17 @@ export default function Layout({ children }: LayoutProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-background flex flex-col">
-      <header className="bg-card border-b border-border sticky top-0 z-50">
+    <div className="min-h-screen bg-background flex flex-col relative">
+      <div className="bg-shapes" aria-hidden="true">
+        <span className="shape-1" />
+        <span className="shape-2" />
+        <span className="shape-3" />
+        <span className="shape-4" />
+        <span className="shape-5" />
+        <span className="shape-6" />
+        <span className="shape-7" />
+      </div>
+      <header className="bg-card/90 backdrop-blur-sm border-b border-border sticky top-0 z-50">
         <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
           <Link to="/" className="flex items-center gap-2.5 shrink-0">
             <div className="w-7 h-7 rounded-lg bg-primary flex items-center justify-center">
@@ -143,11 +152,11 @@ export default function Layout({ children }: LayoutProps) {
         )}
       </header>
 
-      <main className="flex-1 max-w-5xl mx-auto w-full px-4 py-6">
+      <main className="flex-1 max-w-5xl mx-auto w-full px-4 py-6 relative z-10">
         {children}
       </main>
 
-      <footer className="border-t border-border bg-card mt-8">
+      <footer className="border-t border-border bg-card/90 backdrop-blur-sm mt-8 relative z-10">
         <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between text-xs text-muted-foreground">
           <span>© 2026 Adept Online</span>
           <span>Форум сообщества</span>
