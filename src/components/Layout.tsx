@@ -149,7 +149,7 @@ export default function Layout({ children }: LayoutProps) {
 
       <footer className="border-t border-border bg-card mt-8">
         <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between text-xs text-muted-foreground">
-          <span>© 2024 Adept Online</span>
+          <span>© 2026 Adept Online</span>
           <span>Форум сообщества</span>
         </div>
       </footer>
