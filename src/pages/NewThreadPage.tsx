@@ -7,6 +7,7 @@ export default function NewThreadPage() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [category, setCategory] = useState('');
+  const [customCategory, setCustomCategory] = useState('');
   const [tags, setTags] = useState('');
   const navigate = useNavigate();
 
@@ -31,8 +32,8 @@ export default function NewThreadPage() {
             <label className="text-sm font-medium block mb-1.5">Категория *</label>
             <select
               value={category}
-              onChange={e => setCategory(e.target.value)}
-              required
+              onChange={e => { setCategory(e.target.value); setCustomCategory(''); }}
+              required={!customCategory}
               className="w-full text-sm border border-border rounded-lg px-3 py-2.5 bg-background focus:outline-none focus:ring-2 focus:ring-primary/30"
             >
               <option value="">Выберите категорию...</option>
@@ -41,7 +42,19 @@ export default function NewThreadPage() {
                   {cat.isPrivate ? '🔒 ' : ''}{cat.name}
                 </option>
               ))}
+              <option value="custom">✏️ Указать своё название...</option>
             </select>
+            {category === 'custom' && (
+              <input
+                type="text"
+                value={customCategory}
+                onChange={e => setCustomCategory(e.target.value)}
+                placeholder="Введите название категории"
+                required
+                autoFocus
+                className="w-full mt-2 text-sm border border-primary/40 rounded-lg px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary/30 placeholder:text-muted-foreground"
+              />
+            )}
           </div>
 
           <div>
